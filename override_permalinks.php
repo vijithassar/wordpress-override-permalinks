@@ -12,14 +12,14 @@ Version: 0.1
 Author URI: http://www.vijithassar.com/
 */
 
-function external_url($permalink) {
-	$external_permalink = get_post_meta(get_the_id(), 'external_url', true);
-	if ($external_url) {
-		return $external_url;
+function override_permalink($permalink) {
+	$override = get_post_meta(get_the_id(), 'permalink_override', true);
+	if ($override) {
+		return $override;
 	} else {
   	return $permalink;
 	}
 }
 
-add_filter('the_permalink_rss', 'external_url');
-add_filter('the_permalink', 'external_url');
+add_filter('the_permalink_rss', 'override_permalink');
+add_filter('the_permalink', 'override_permalink');

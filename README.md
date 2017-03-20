@@ -8,7 +8,7 @@ Upload this file to your wp-contents/plugins directory and then enable the plugi
 
 # Usage
 
-Add a [custom field](https://codex.wordpress.org/Custom_Fields) to the post. The custom field's key should be `external_url` and the value should be the new URL that will replace the WordPress default permalink.
+Add a [custom field](https://codex.wordpress.org/Custom_Fields) to the post. The custom field's key should be `permalink_override` and the value should be the new URL that will replace the WordPress default permalink.
 
 # Alternatives
 
